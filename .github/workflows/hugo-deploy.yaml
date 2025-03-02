@@ -1,0 +1,33 @@
+# In your .github/workflows/hugo-deploy.yml file:
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+      
+      # Add this step to manually clone the theme
+      # - name: Clone theme
+      #   run: git clone https://github.com/gurusabarish/hugo-profile.git themes/hugo-profile
+      
+      - name: Build
+        run: hugo --minify
+      
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

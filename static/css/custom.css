@@ -1,0 +1,62 @@
+/* Custom styles for project galleries */
+.project-gallery {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-gallery h6 {
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.project-gallery .carousel {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-gallery .carousel-item img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.badge {
+    margin-right: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .card {
+    background-color: #2d2d2d;
+    border-color: #444;
+}
+
+[data-theme="dark"] .card-body {
+    color: #eaeaea;
+}
+
+[data-theme="dark"] .badge.bg-primary {
+    background-color: #375a7f !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .project-gallery .carousel-item img {
+        height: 200px;
+    }
+}
