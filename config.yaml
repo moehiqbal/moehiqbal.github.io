@@ -1,0 +1,535 @@
+baseURL: "https://moeh-iqbal.github.io/"
+languageCode: "en-us"
+title: "Muhamad Iqbal | DevSecOps Engineer"
+theme: "hugo-profile"
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+
+pagination:
+  pagerSize: 3
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Menus
+# menu:
+#   main:
+#     - identifier: "home"
+#       name: "Home"
+#       title: "Home"
+#       url: "/"
+#       weight: 1
+    # - identifier: "about"
+    #   name: "About"
+    #   title: "About"
+    #   url: "/#about"
+    #   weight: 2
+    # - identifier: "experience"
+    #   name: "Experience"
+    #   title: "Experience"
+    #   url: "/#experience"
+    #   weight: 3
+    # - identifier: "projects"
+    #   name: "Projects"
+    #   title: "Projects"
+    #   url: "/#projects"
+    #   weight: 4
+    # - identifier: "skills"
+    #   name: "Skills"
+    #   title: "Skills"
+    #   url: "/#skills"
+    #   weight: 5
+    # - identifier: "education"
+    #   name: "Education"
+    #   title: "Education"
+    #   url: "/#education"
+    #   weight: 6
+    # - identifier: "certifications"
+    #   name: "Certifications"
+    #   title: "Certifications"
+    #   url: "/#certifications"
+    #   weight: 7
+    # - identifier: "contact"
+    #   name: "Contact"
+    #   title: "Contact"
+    #   url: "/#contact"
+    #   weight: 8
+
+params:
+  title: "Muhamad Iqbal"
+  description: "Experienced DevSecOps and Site Reliability Engineer specializing in Kubernetes, Cloud Infrastructure, and Security"
+  favicon: "/images/static/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Set to true if you want to use CDN.
+  useBootstrapCDN: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    defaultTheme: "dark"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    brandName: "Muhamad Iqbal" # Brand name for the brand | default is the title variable
+    disableSearch: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hello, I'm"
+    title: "Muhamad Iqbal"
+    subtitle: "DevSecOps & Site Reliability Engineer"
+    content: "Building robust, scalable, and secure cloud infrastructure. Specializing in Kubernetes, Cloud Technologies, and Infrastructure Automation."
+    image: /images/hero.jpg
+    bottomImage:
+      enable: false
+    roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Download Resume"
+      url: "/files/Muhamad_Iqbal_Resume.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/moehiqbal
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/moeh-iqbal
+        - icon: fas fa-envelope
+          url: mailto:moeh.iqbal98@gmail.com
+        - icon: fas fa-phone
+          url: tel:+6289510770385
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.JPG"
+    content: |-
+      I'm a **DevSecOps and Site Reliability Engineer** with extensive experience in cloud infrastructure, containerization, and security implementation. My expertise lies in building and maintaining secure, reliable, and scalable systems that enable businesses to innovate confidently.
+
+      Throughout my career, I've successfully led complex infrastructure migrations, implemented robust CI/CD pipelines, and architected comprehensive observability solutions across AWS, GCP, and Azure environments.
+
+      With a deep understanding of Kubernetes, Terraform, and cloud-native technologies, I focus on creating automated, reproducible, and secure infrastructure that accelerates development workflows while maintaining operational excellence.
+    skills:
+      enable: true
+      title: "Core Competencies"
+      items:
+        - "Cloud Infrastructure Architecture"
+        - "Kubernetes Orchestration & Management"
+        - "Infrastructure as Code (Terraform)"
+        - "CI/CD Pipeline Automation"
+        - "Security Implementation & Compliance"
+        - "Observability & Monitoring Solutions"
+        - "Multi-Cloud Strategy"
+        - "Containerization & Microservices"
+        - "Incident Response & Management"
+        - "Performance Optimization"
+
+  # Experience
+  experience:
+    enable: true
+    title: "Professional Journey"
+    items:
+      - job: "Cloud DevSecOps Engineer"
+        company: "Indico"
+        companyUrl: ""
+        date: "Apr 2024 - Present"
+        content: |-
+          - Performed AWS Well-Architected Reviews, optimising cost efficiency, security, and capacity management across multiple environments.
+          - Expanded Infrastructure-as-Code (IaC) capabilities to support multi-cloud deployments, converting AWS-based Terraform configurations for Azure, Huawei Cloud, and GCP while ensuring cross-cloud compatibility.
+          - Standardised Terraform modules, improving scalability and vendor-agnostic deployments.
+          - Designed and implemented Terraform-based infrastructure provisioning for both internal and business applications across all environments, ensuring consistency, security, and automation.
+          - Led an AWS EKS Upgrade Initiative, modernising Kubernetes clusters from older versions to 1.29 and 1.30 with minimal downtime and no service disruptions.
+          - Implemented Security Measures including Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST) into GitLab CI/CD pipelines, detecting vulnerabilities early in the SDLC.
+          - Deployed Web Application Firewall (WAF) on Indico services.
+
+      - job: "Site Reliability Engineer"
+        company: "Moladin"
+        companyUrl: ""
+        date: "Jun 2022 - Apr 2024"
+        content: |-
+          - Orchestrated migration of microservices from on-premise Kubernetes to AWS EKS, implementing auto-scaling and optimized resource allocation that improved system resilience and reduced infrastructure costs by 30%.
+          - Implemented Flagger for automated canary and blue-green deployment strategies with metrics-based validation that eliminated production downtime during releases.
+          - Executed cross-cloud migration from AWS to GCP using Terraform modules while ensuring zero service disruption and enhancing disaster recovery capabilities.
+          - Established GCP infrastructure through Terraform-based IaC with reusable modules and version control that enabled consistent deployments across all environments.
+          - Engineered GitOps workflows with Jenkins CI/CD pipelines that incorporated automated testing and security scanning to streamline deployment processes.
+          - Architected observability stack with Prometheus, Loki, Thanos, OpenTelemetry, and Grafana that provided real-time visibility and reduced incident resolution time.
+          - Transformed monolithic applications into containerized microservices for Kubernetes deployment that improved fault isolation and reduced deployment times by 65%.
+          - Standardized infrastructure components using Helm Charts to manage critical services including Nginx, Prometheus, Redis, and other applications, ensuring consistent configuration and seamless updates across all environments.
+          - Administered GKE clusters across multiple environments by implementing auto-scaling, pod disruption budgets, and resource quotas that optimized performance while reducing costs by 25%.
+
+      - job: "Software Engineer"
+        company: "Jakarta Health Agency"
+        companyUrl: ""
+        date: "Jan 2021 - Jun 2022"
+        content: |-
+          - Orchestrated Kubernetes infrastructure for critical healthcare applications, implementing high-availability configurations that ensured 99.9% uptime for essential patient services.
+          - Engineered API integration framework connecting Jaksehat platform with multiple hospitals and health centers across DKI Jakarta, enabling secure patient data exchange while maintaining strict compliance with healthcare regulations.
+          - Developed robust backend architecture for Jaksehat using Laravel, implementing optimized database design and RESTful services that supported 10,000+ daily users while ensuring responsive performance.
+
+      - job: "Site Reliability Engineer"
+        company: "Oy Indonesia"
+        companyUrl: ""
+        date: "Oct 2020 - Dec 2020"
+        content: |-
+          - Automated AWS infrastructure using Terraform to provision and manage EKS clusters, security groups, and networking components, reducing deployment time by 70% while ensuring consistent security configurations.
+          - Implemented Ansible playbooks for configuration management and deployment automation, standardizing server setups and eliminating manual errors across cloud environments.
+          - Deployed ClamAV security solution for real-time virus scanning across AWS instances, establishing automated quarantine protocols that strengthened infrastructure security posture.
+          - Engineered comprehensive monitoring for AWS infrastructure using Grafana dashboards connected to multiple data sources, providing real-time visibility into system performance and enabling proactive issue resolution.
+
+      - job: "Site Reliability Engineer"
+        company: "Aqalin"
+        companyUrl: ""
+        date: "Mar 2020 - Jun 2021"
+        content: |-
+          - Architected high-performance Kubernetes Bare Metal clusters for production environments, implementing custom networking and storage solutions that delivered enterprise-grade reliability without cloud provider overhead.
+          - Developed optimized Kubernetes manifests for backend and frontend applications, incorporating resource limits, health checks, and auto-scaling policies that improved application stability and performance.
+          - Designed comprehensive monitoring infrastructure using Prometheus and Grafana, creating custom dashboards and alerting rules that provided real-time visibility into system health metrics and application performance.
+
+      - job: "Junior DevOps Engineer"
+        company: "Meeber"
+        companyUrl: ""
+        date: "Apr 2019 - Oct 2019"
+        content: |-
+          - Architected Docker-based development environments on AWS infrastructure, creating reproducible containerized workspaces that accelerated developer onboarding and ensured consistent testing conditions.
+          - Implemented infrastructure automation using Ansible playbooks integrated with GitLab CI/CD pipelines, enabling consistent, version-controlled configuration management across all systems.
+          - Established comprehensive monitoring with Nagios across development, staging, and production environments, configuring custom service checks and alert thresholds that improved incident response time by 40%.
+
+  # Projects
+  # Projects
+  projects:
+    enable: true
+    title: "Featured Projects"
+    items:
+      - title: "AWS RBAC with Teleport"
+        content: "Implemented comprehensive RBAC for AWS EKS and RDS resources using Teleport for secure, auditable access management."
+        # image: /images/projects/achievement.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "AWS EKS"
+          - "RDS"
+          - "Teleport"
+          - "RBAC"
+          - "Security"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/teleport-rbac-aws"
+        content: |-
+          - Architected and implemented role-based access control (RBAC) for AWS EKS clusters and RDS databases using Teleport
+          - Established fine-grained access policies based on user roles and responsibilities
+          - Created comprehensive audit logging and session recording for compliance requirements
+          - Implemented just-in-time access provisioning to reduce standing privileges
+          - Integrated with existing identity providers for seamless authentication
+          - Developed custom training materials and documentation for secure access procedures
+
+      - title: "AWS Pipeline for ECS Deployment"
+        content: "Designed and implemented a fully automated CI/CD pipeline for deploying containerized applications to AWS ECS."
+        # image: /images/projects/achievement.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "AWS CodePipeline"
+          - "CodeCommit"
+          - "CodeBuild"
+          - "ECS"
+          - "Infrastructure as Code"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/aws-ecs-pipeline"
+        content: |-
+          - Architected end-to-end CI/CD pipeline using AWS native services (CodePipeline, CodeCommit, CodeBuild)
+          - Implemented infrastructure as code using CloudFormation for fully automated environment provisioning
+          - Created container build and optimization process with AWS CodeBuild
+          - Configured automated testing, security scanning, and validation stages
+          - Established blue/green deployment strategy to ECS with rollback capabilities
+          - Implemented monitoring and alerting for pipeline status and deployment health
+
+      - title: "Progressive Delivery with Flagger"
+        content: "Implemented automated canary deployments and A/B testing capabilities for microservices infrastructure."
+        # image: /images/projects/achievement.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "Kubernetes"
+          - "Flagger"
+          - "Canary Deployments"
+          - "AWS EKS"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/k8s-flagger-project"
+        content: |-
+          - Configured Flagger for automated canary and blue-green deployment strategies
+          - Implemented metric-based validation to ensure service health during deployments
+          - Integrated with Prometheus and Grafana for deployment monitoring
+          - Established automated rollback procedures based on custom health metrics
+          - Reduced deployment risks and eliminated production downtime during releases
+      
+      - title: "AWS to GCP Migration Framework"
+        content: "Developed and executed multi-cloud migration strategy with zero downtime using Terraform."
+        # image: /images/projects/achievement.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "Terraform"
+          - "AWS"
+          - "GCP"
+          - "Infrastructure as Code"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/terraform-cloud-migration"
+        content: |-
+          - Created modular Terraform components for cross-cloud resource provisioning
+          - Implemented CI/CD pipelines for automated infrastructure testing and deployment
+          - Designed traffic routing strategies to ensure zero downtime during migration
+          - Established comprehensive monitoring across both cloud environments
+          - Enhanced disaster recovery capabilities through multi-cloud architecture
+      
+      - title: "EKS Management CLI Tool"
+        content: "Created Python CLI tool for automating EKS cluster management, upgrades, and health checks."
+        # image: /images/projects/achievement.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "Python"
+          - "AWS EKS"
+          - "CLI"
+          - "Automation"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/eks-management-cli"
+        content: |-
+          - Developed Python-based CLI for managing EKS clusters
+          - Automated cluster version upgrades, node group updates, and addon management
+          - Implemented comprehensive health checks and status reporting
+          - Created safety checks to prevent disruption during operations
+          - Reduced management complexity and standardized operational procedures
+            
+      - title: "Kubernetes Bare Metal Platform"
+        content: "Designed and implemented production-ready Kubernetes on bare metal infrastructure with microservices conversion."
+        # image: /images/projects/achievement.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "Kubernetes"
+          - "Bare Metal" 
+          - "Helm"
+          - "Microservices"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/kubernetes-bare-metal"
+        content: |-
+          - Deployed high-availability Kubernetes cluster on bare metal servers
+          - Converted Docker-based applications to Kubernetes using Helm charts
+          - Implemented networking and storage solutions for the cluster
+          - Established monitoring and logging infrastructure
+          - Reduced costs while maintaining enterprise-grade reliability
+            
+      - title: "Automated Security Scanning Platform"
+        content: "Built automated ClamAV-based security scanning infrastructure for continuous vulnerability detection."
+        # image: /images/projects/achievement.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "ClamAV"
+          - "Security"
+          - "AWS"
+          - "Automation"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/security-scan-automation"
+        content: |-
+          - Deployed ClamAV scanning agents to all AWS instances
+          - Implemented automated quarantine procedures for compromised systems
+          - Created centralized reporting and alerting system
+          - Established compliance reporting for security audits
+          - Improved infrastructure security posture through continuous scanning
+      
+      - title: "GCP Enterprise Infrastructure Platform"
+        content: "Designed and implemented comprehensive GCP infrastructure with Kubernetes, databases, security, and monitoring using Terraform IaC and Helm charts."
+        # image: /images/projects/gcp-platform.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "GKE"
+          - "Terraform"
+          - "Cloud Armor"
+          - "Kafka"
+          - "AlloyDB"
+          - "Keycloak"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/gcp-platform-infrastructure"
+        content: |-
+          - Architected and implemented comprehensive Google Cloud Platform infrastructure using Terraform IaC
+          - Deployed and configured GKE clusters with advanced security settings and node auto-provisioning
+          - Implemented Cloud Armor Web Application Firewall for enhanced security protection
+          - Set up Memorystore (Redis) and AlloyDB/Cloud SQL databases with high-availability configurations
+          - Configured comprehensive logging and monitoring solutions across the platform
+          - Deployed OpenShift on GCP with custom configurations to meet enterprise requirements
+          - Implemented Kafka event-driven architecture using Helm charts for messaging infrastructure
+          - Integrated Keycloak identity management system for centralized authentication and authorization
+          - Created reusable Terraform modules for consistent infrastructure deployment across environments
+          - Established CI/CD pipelines for both infrastructure and application deployments
+
+      - title: "Multi-Cloud Terraform Conversion Framework"
+        content: "Developed a systematic approach to convert AWS Terraform configurations to equivalent GCP, Azure, and Huawei Cloud infrastructure code."
+        image: /images/projects/multi-cloud-conversion.jpg
+        # featured:
+        #   name: "Details"
+        #   link: "#"
+        badges:
+          - "Terraform"
+          - "AWS"
+          - "GCP" 
+          - "Azure"
+          - "Huawei Cloud"
+        # links:
+        #   - icon: fab fa-github
+        #     url: "https://github.com/moehiqbal/terraform-multicloud-conversion"
+        content: |-
+          - Created a framework to systematically convert AWS Terraform configurations to equivalent GCP, Azure, and Huawei Cloud formats
+          - Developed mapping libraries for resource translations between cloud providers (compute, storage, networking, IAM, databases)
+          - Implemented automated validation testing to ensure functional equivalence across platforms
+          - Built custom modules that abstract provider-specific implementations behind a common interface
+          - Established best practices for maintaining infrastructure parity in multi-cloud environments
+          - Created comprehensive documentation and conversion guides for different resource types
+          - Designed migration strategies to minimize downtime during cross-cloud transitions
+          - Implemented cost estimation and comparison tools to evaluate hosting options
+          - Integrated the framework into CI/CD pipelines for automated infrastructure provisioning across clouds
+          - Supported multiple organizations in successful cloud migrations using this framework
+
+  # Skills section
+  techstack:
+    enable: true
+    title: "Technical Skills"
+    items:
+      - title: "Cloud & Infrastructure"
+        description: |-
+          AWS (EKS, EC2, S3, RDS, IAM, VPC, CloudFormation, CodePipeline, ECS)
+          GCP (GKE, Compute Engine, Cloud Storage, Cloud SQL)
+          Azure (AKS, VMs, Storage, SQL)
+          Infrastructure as Code (Terraform, CloudFormation)
+          Virtualization & Containerization (Docker, Podman)
+
+      - title: "Container Orchestration"
+        description: |-
+          Kubernetes (EKS, GKE, AKS, Bare Metal)
+          Helm, ArgoCD
+          Istio, Service Mesh
+          Canary Deployments (Flagger)
+          Container Security (Trivy, OPA, Falco)
+
+      - title: "CI/CD & Automation"
+        description: |-
+          Jenkins, GitLab CI/CD, GitHub Actions
+          AWS CodePipeline, CodeBuild, CodeCommit
+          Ansible
+          GitOps Workflows
+          Security Scanning Integration
+
+      - title: "Monitoring & Observability"
+        description: |-
+          Prometheus, Grafana, Alertmanager
+          Distributed Tracing (OpenTelemetry, Jaeger)
+          Log Management (Loki, Fluent-bit, EFK Stack)
+          Thanos, Application Performance Monitoring
+
+      - title: "Security"
+        description: |-
+          SAST/DAST Implementation
+          Web Application Firewall (WAF)
+          Secret Management (Vault, AWS Secrets Manager)
+          Network Policy & Security Groups
+          ClamAV, Vulnerability Scanning
+
+      - title: "Programming & Development"
+        description: |-
+          Python, Golang
+          Bash Scripting
+          APIs & Microservices
+          Laravel (PHP)
+          Infrastructure Testing
+
+  # Education
+  education:
+    enable: true
+    title: "Education"
+    index: false
+    items:
+      - title: "Bachelor's Degree in Computer Science"
+        school:
+          name: "Binus University"
+          url: "#"
+        date: "Aug 2021 - Dec 2023"
+        content: |-
+          Thesis: Application Deployment Strategy Comparison
+      
+      - title: "Associate's Degree in Computer Science"
+        school:
+          name: "IPB Vocational School"
+          url: "#"
+        date: "Aug 2016 - Nov 2019"
+        content: |-
+          Thesis: Automation of Gitlab CI/CD and Ansible
+
+  # Certifications
+  achievements:
+    enable: true
+    title: "Certifications"
+    items:
+      - title: "Certified Kubernetes Application Developer (CKAD)"
+        content: "Cloud Native Computing Foundation"
+        url: "#"
+        # image: /images/achievements/ckad.png
+        date: "Valid until Oct 2025"
+        featureLink: "License Number: LF-9av34ne3dc"
+      
+      - title: "Certified Kubernetes Administrator (CKA)"
+        content: "Cloud Native Computing Foundation"
+        url: "#"
+        # image: /images/achievements/cka.png
+        date: "Valid until May 2025"
+        featureLink: "License Number: LF-wt6napbiix"
+
+  # Contact
+  # contact:
+  #   enable: true
+  #   title: "Get In Touch"
+  #   content: "Interested in discussing how I can help your organization build reliable, secure, and scalable infrastructure? Let's connect!"
+  #   email: moeh.iqbal98@gmail.com
+  #   btnName: "Send Message"
+  #   formspree:
+  #     enable: true
+  #     formId: "mqkwgdoj" # Replace wit  h your form ID from formspree.io
+  #   phone:
+  #     enable: true
+  #     number: "+6289510770385"
+    
+  footer:
+    recentPosts:
+      enable: false
+    socialNetworks:
+      github: https://github.com/moehiqbal
+      linkedin: https://linkedin.com/in/moeh-iqbal
+      email: mailto:moeh.iqbal98@gmail.com
